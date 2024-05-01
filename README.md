@@ -1,1 +1,1 @@
-Testes utilizando o Framework React.js
+Site para o servidor PixelmonWorlds.
