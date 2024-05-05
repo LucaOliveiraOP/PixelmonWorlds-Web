@@ -9,10 +9,12 @@ function App() {
   const navigate = useNavigate();
 
   const playSound = () => {
-    const audio = new Audio(clickSound);
-    audio.volume = 0.15;
-    audio.play();
-    setSoundPlayed(true);
+    if (!soundPlayed) {
+      const audio = new Audio(clickSound);
+      audio.volume = 0.15;
+      audio.play();
+      setSoundPlayed(true);
+    }
   };
 
   useEffect(() => {
@@ -26,7 +28,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        <a></a>
         <a>
           <img
             src={Logo}
