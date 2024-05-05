@@ -1,25 +1,45 @@
-import { useState } from 'react'
-import Logo from './assets/logo.png'
-import './App.css'
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Logo from "./assets/logo.png";
+import "./App.css";
+import clickSound from "./assets/pokeball.mp3";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [soundPlayed, setSoundPlayed] = useState(false);
+  const navigate = useNavigate();
+
+  const playSound = () => {
+    const audio = new Audio(clickSound);
+    audio.volume = 0.15;
+    audio.play();
+    setSoundPlayed(true);
+  };
+
+  useEffect(() => {
+    if (soundPlayed) {
+      setTimeout(() => {
+        navigate("/home");
+      }, 1000);
+    }
+  }, [soundPlayed, navigate]);
 
   return (
     <div className="App">
       <div>
+        <a></a>
         <a>
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={Logo} className="logo pixelmon" alt="logo pixelmon" />
+          <img
+            src={Logo}
+            className="logo pixelmon"
+            alt="logo pixelmon"
+            onClick={playSound}
+          />
         </a>
       </div>
       <h1>Bem vindo ao Pixelmon Worlds!</h1>
-      <p className="read">
-        Clique na pokébola para continuar
-      </p>
+      <p className="read">Clique na pokébola para continuar</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
