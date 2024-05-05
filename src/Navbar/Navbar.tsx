@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import Logo1 from "../assets/logo1.png";
 import Logo2 from "../assets/logo2.png";
+import Pikachu from "../assets/pikachu.gif";
 import "./nav.css";
 
 const Navbar = () => {
   return (
     <nav>
       <div className="logo-container">
+        <img src={Pikachu} alt="pikachu" className="nav pikachu" />
         <img src={Logo1} alt="Logo 1" className="nav logo1" />
         <img src={Logo2} alt="Logo 2" className="nav logo2" />
       </div>

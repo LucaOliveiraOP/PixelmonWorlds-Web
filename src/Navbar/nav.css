@@ -24,21 +24,38 @@ nav {
   width: 40px;
   height: auto;
   margin-right: 10px;
-  animation: spin 1.5s linear infinite;
+  /* animation: spin 1.5s linear infinite; */
 }
 
-@keyframes spin {
+/* @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .logo2 {
   width: 150px;
   height: auto;
+}
+
+.pikachu {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  animation: run 10s linear infinite;
+}
+
+@keyframes run {
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc(100% + 100px);
+  }
 }
 
 ul {
