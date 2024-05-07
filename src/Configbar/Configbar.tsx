@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./nav.css";
+import "./configbar.css";
 
-const Navbar = () => {
+const Configbar = () => {
   return (
     <nav>
       <div className="nav-links">
@@ -21,4 +21,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Configbar;
