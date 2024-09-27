@@ -46,6 +46,11 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  background: transparent; /* Torna o fundo do botão transparente */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
 }
 button:hover {
   border-color: #646cff;

@@ -1,0 +1,22 @@
+/* Supondo que a classe do contêiner seja .logo-container ou similar */
+
+.logo-container-home {
+  display: flex; /* Alinha os itens em linha */
+  justify-content: center; /* Centraliza os logos */
+  align-items: flex-start; /* Alinha os logos ao topo */
+  height:750px; /* Altura para a barra de navegação */
+}
+
+.logo1 {
+  width: 90px; /* ajuste conforme necessário */
+  padding-bottom: 600px;
+}
+
+.logo2 {
+  width: 200px; /* ajuste conforme necessário */
+  margin-left: 5px; /* pequeno espaço à esquerda */
+  padding-bottom: 600px;
+}
+
+
+/* Adicione outras regras de estilo conforme necessário */
